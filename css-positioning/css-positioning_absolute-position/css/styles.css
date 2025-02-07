@@ -36,29 +36,50 @@ main {
  */
 
 .box--top-left {
+  position: absolute;
+  left: 0px;
   background-color: #aed6f1;
 }
 
 .box--top-center {
+  position: absolute;
+  left: 210px;
+  right: 210px;
   background-color: #85c1e9;
 }
 
 .box--top-right {
+  position: absolute;
+  right: 0px;
   background-color: #5dade2;
 }
 
 .box--center {
+  position: absolute;
+  left: 210px;
+  right: 210px;
+  bottom: 40%;
   background-color: #3498db;
 }
 
 .box--bottom-left {
+  position: absolute;
+  bottom: 0;
   background-color: #2874a6;
 }
 
 .box--bottom-center {
+  position: absolute;
+  left: 210px;
+  right: 210px;
+  bottom: 0;
   background-color: #21618c;
 }
 
 .box--bottom-right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
   background-color: #1b4f72;
 }
