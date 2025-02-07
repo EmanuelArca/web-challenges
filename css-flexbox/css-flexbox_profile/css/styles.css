@@ -21,7 +21,7 @@ h2 {
 
 .profile {
 display:flex;
-flex-direction: column;
+flex-direc_tion: column;
 }
 
 .profile__image {
