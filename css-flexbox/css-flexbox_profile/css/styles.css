@@ -21,7 +21,7 @@ h2 {
 
 .profile {
 display:flex;
-flex-direc_tion: column;
+flex-direction: column;
 }
 
 .profile__image {
@@ -32,16 +32,22 @@ flex-direc_tion: column;
   border: solid #3f0097 1px;
   max-width: 50%;
   justify-content: center;
-
+}
 
 .tech-stack__list {
+  display:flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
   list-style: none;
   padding-left: 0;
+  display:flex;
+  justify-content: flex-start;
 }
 
 .tech-stack__list-item {
   padding: 10px;
   background-color: #3f0097;
   color: #ffffff;
-  border-radius: 10px;
+  border-radius: 10px;C
 }
