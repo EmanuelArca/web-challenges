@@ -41,8 +41,7 @@ flex-direction: column;
   flex-wrap: wrap;
   list-style: none;
   padding-left: 0;
-  display:flex;
-  justify-content: flex-start;
+ 
 }
 
 .tech-stack__list-item {
