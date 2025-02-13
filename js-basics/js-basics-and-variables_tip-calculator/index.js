@@ -22,7 +22,7 @@ console.log(mealCost);
 const tipPercentage = 2;
 console.log(tipPercentage);
 
-const tipAmount = mealCost * tipPercentage;
+const tipAmount = (mealCost * tipPercentage) / 100;
 console.log(tipAmount);
 
 const totalCost = mealCost + tipAmount;
