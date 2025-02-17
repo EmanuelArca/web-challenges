@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+<<<<<<< HEAD
+=======
+:root {
+  --color-granite: hsla(263, 100%, 61%, 0.45);
+  --color-nemo: hsl(16, 100%, 60%);
+  --color-foam: hsl(0, 0%, 100%);
+}
+
+>>>>>>> 55043f115e322a2756328c838f11a58fe1a03e81
 body {
   margin: 0;
   font-family: system-ui;
@@ -11,13 +20,21 @@ body {
 }
 
 header {
+<<<<<<< HEAD
   background: rgb(131 54 255/ 45%);
   
+=======
+  background: var(--color-granite);
+>>>>>>> 55043f115e322a2756328c838f11a58fe1a03e81
 }
 
 h1 {
   text-align: center;
+<<<<<<< HEAD
   color: white;
+=======
+  color: var(--color-foam);
+>>>>>>> 55043f115e322a2756328c838f11a58fe1a03e81
   line-height: 1.4;
   margin: 0;
   letter-spacing: 0.025em;
@@ -30,7 +47,11 @@ h2 {
 }
 
 strong {
+<<<<<<< HEAD
   color: #ff4a11;
+=======
+  color: var(--color-nemo);
+>>>>>>> 55043f115e322a2756328c838f11a58fe1a03e81
 }
 
 section {
@@ -58,6 +79,7 @@ figure {
   gap: 10px;
   margin: 0;
   padding: 10px;
+<<<<<<< HEAD
   background-color: #ff4a11ff;
   border-radius: 4px;
 }
@@ -79,22 +101,40 @@ a {
   border-radius: 4px;
   background-color: hsl(14 100% 53%);
   color: #fff;
+=======
+  background-color: var(--color-nemo);
+  color: var(--color-foam);
+>>>>>>> 55043f115e322a2756328c838f11a58fe1a03e81
 }
 
 a:hover,
 a:focus-visible {
+<<<<<<< HEAD
   background-color: #8336ff7b;
+=======
+  background-color: var(--color-granite);
+>>>>>>> 55043f115e322a2756328c838f11a58fe1a03e81
   text-decoration: none;
 }
 
 mark {
+<<<<<<< HEAD
   background-color: rgb(255 74 17);
   color: #ffffff;
+=======
+  background-color: var(--color-nemo);
+  color: var(--color-foam);
+>>>>>>> 55043f115e322a2756328c838f11a58fe1a03e81
   border-radius: 4px;
   letter-spacing: 0.025em;
 }
 
 ::selection {
+<<<<<<< HEAD
   background-color: #252629;
   color: #ff4a11;
+=======
+  background-color: var(--color-granite);
+  color: var(--color-nemo);
+>>>>>>> 55043f115e322a2756328c838f11a58fe1a03e81
 }
