@@ -1,7 +1,6 @@
 console.clear();
 
-let number = Math.random(); // Number wird auf Zufallszahl gesetzt mit Math.random, aber nur einmal zu Beginn
-let count = 0;  // Zähler der sich um 1 erhöhen soll für jede 
+
 
 // --v-- write or modify code below this line --v--
 
