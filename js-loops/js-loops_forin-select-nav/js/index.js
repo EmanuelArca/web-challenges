@@ -24,14 +24,14 @@ main.append(select);   //  Fügt das Select Element in das bestehende Main Eleme
 for (const option in languages) {    // for in Schleife erstellen, um durch das languages Objekt durchzugehen, jede einzelne Sprache ist eine Option
   let optionElement = document.createElement("option");   // neue variable, jeder Schleifen Durchgang erstellt eine neue Option und hängt sie im Select Element an 
   optionElement.textContent = languages[option];    // für jede Option wird ein Name gegeben, gleicher name wie beim jeweiligen Land, weil Option jeweils ein Element aus dem Select Element ist (was languages heisst)
-  select.append(optionElement);    // an das Select Element wird jeweils für jedes Land eine Option angehängt
+  select.append(optionElement);    // an das Select Element wird jeweils für jedes Land eine Option angehängt, von oben nach unten bis zum letzten und dann stoppt der Loop
 }
   
 //--------------------------------------------------------------------------------------------------
 
 // Part 2: Creating a Navigation Bar
 
-const nav = {                                               // Object (kein Array)
+const nav = {                                         // Object (kein Array) mit 3 Keys
   home: { href: "/home", text: "Home" },
   about: { href: "/about", text: "About" },
   contact: { href: "/contact", text: "Contact" },
@@ -42,6 +42,6 @@ const ul = document.createElement("ul");    // hier wird das ul Element erstellt
 main.append(navElement);     // hier wird das Nav Element (Nav Bar) im HTML eingefügt
 navElement.append(ul);      //  hier wird das Ul Element (innerhalb des Nav Element) im HTML eingefügt
 
-// WICHTIG: hier muss erst das Nav Element hinzugefügt werden, dann innerhalb des Nav Elements das UI Element!
+// WICHTIG: hier muss erst das Nav Element hinzugefügt werden, dann innerhalb des Nav Elements das UI Element! Die Nav Bar muss erst existieren.
 
 
