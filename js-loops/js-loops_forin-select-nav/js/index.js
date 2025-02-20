@@ -22,7 +22,7 @@ main.append(select);   //  Fügt das Select Element in das bestehende Main Eleme
 
 
 for (const option in languages) {    // for in Schleife erstellen, um durch das languages Objekt durchzugehen, jede einzelne Sprache ist eine Option
-  let optionElement = document.createElement("option");   // neue variable, jeder Schleifen Durchgang erstellt eine neue Option und hängt sie im Select Element an 
+  let optionElement = document.createElement("option");   // neue variable, jeder Schleifen Durchgang erstellt eine neue Option (html element <option>) und hängt es im Select Element an 
   optionElement.textContent = languages[option];    // für jede Option wird ein Name gegeben, gleicher name wie beim jeweiligen Land, weil Option jeweils ein Element aus dem Select Element ist (was languages heisst)
   select.append(optionElement);    // an das Select Element wird jeweils für jedes Land eine Option angehängt, von oben nach unten bis zum letzten und dann stoppt der Loop
 }
@@ -43,5 +43,19 @@ main.append(navElement);     // hier wird das Nav Element (Nav Bar) im HTML eing
 navElement.append(ul);      //  hier wird das Ul Element (innerhalb des Nav Element) im HTML eingefügt
 
 // WICHTIG: hier muss erst das Nav Element hinzugefügt werden, dann innerhalb des Nav Elements das UI Element! Die Nav Bar muss erst existieren.
+
+
+
+// For in Schleife für das NAV Element
+for (const navLinks in nav)  {
+  let navListElement = document.createElement("li");   // Listen Element wird erstellt (name navListElement)
+  let navAnker = document.createElement("a");         // Anker Element wird erstellt (name navAnker)
+  navAnker.textContent = nav[navLinks].text;    // hier wird der Text für die Links hinzugefügt die auf der Internetseite dann angezeigt werden (.text muss dahinter stehen, da es sich um Text handelt, siehe oben bei den Objekten, sonst steht einfach "Objekt" auf der Internetseite)
+  navAnker.href = nav[navLinks];          // hier wird der Link über die href Eigenschaft hinzugefügt und in der Internetseite implementiert. 
+  ul.append(navListElement);           // hier werden zuerst dem im bereits oben erstellten UI Element die 3 Listen Elemente hinzugefügt, die vorher als navListElement angelegt wurden
+  navListElement.append(navAnker);     // hier wird dem navlistELement (li) die vorher erstellten Anker hinzugefügt, die vovher als navAnker angelegt wurden.
+}
+
+
 
 
