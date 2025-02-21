@@ -19,4 +19,12 @@ const colors = [
   "#A5A5A5",
 ];
 
-colors.forEach();
+//Array Methode for Each bauen: 
+
+colors.forEach((farbigesFeld) => {      //Funktion schreiben die über forEach ausgeführt wird
+  const divElementderFarben = document.createElement ("div");     // neues Div Element erstellen
+  divElementderFarben.classList.add("color-box");                // Farbe hinzufügen
+  divElementderFarben.style.backgroundColor = farbigesFeld;           // Hintergrundfarbe hinzufügen, hier muss die Variable genommen werden, die den Namen der Funktion trägt
+  document.body.append (divElementderFarben);         // Element der seite hinzufügen
+
+});
