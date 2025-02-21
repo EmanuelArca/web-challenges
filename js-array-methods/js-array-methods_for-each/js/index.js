@@ -28,3 +28,19 @@ colors.forEach((farbigesFeld) => {      //Funktion schreiben die über forEach a
   document.body.append (divElementderFarben);         // Element der seite hinzufügen
 
 });
+
+// neue Function erstellen, um die Farben ein zweites mal zu erstellen
+
+function renderColorBox (farbigesFeld) {      // Hier ist wichtig, dass der Parameter in den Klammern steht, derselbe der auch oben bei forEach festgelegt wurde
+  const divElementderFarben = document.createElement ("div"); 
+  divElementderFarben.classList.add("color-box"); 
+  divElementderFarben.style.backgroundColor = farbigesFeld; 
+  document.body.append(divElementderFarben); 
+}
+
+
+// Alles erneut erzeugen, diesmal nur mit forEach und der neu erstellten Function
+
+colors.forEach(renderColorBox);
+
+// ! colors ist der Name des gesamten Arrays, und renderColorBox meine neu erstellte Funktion. Hier wird beides zusammen aufgerufen und somit ist der Code viel kürzer
