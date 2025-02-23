@@ -24,13 +24,31 @@ const cards = [
   },
 ];
 
-const onlyCardWithIdTwo = null;
+// Bei Filter ist entscheidend, was in der klammer steht, man definiert hier die sachen, die man haben möchte (return braucht man hierbei nicht, weil das Ergebnis(neues Array wird innerhalb der Variable "onlyCardWithIdTwo" usw gespeichert und kann weiterverwendet werden
 
-const allCardsWith3Tags = null;
 
-const allCardsThatAreNotBookmarked = null;
+const onlyCardWithIdTwo = cards.filter(card => card.id === "2");          // Der Filter geht durch jedes Element des Arrays (Cards), card ist ein frei gewählter Parameter und repräsentiert das aktuelle Element (das einzelne Objekt im Array. Sobald man card hat, kann man auf die Eigenschaften wie id etc zugreifen mit card gibt man dem einzelnen objekt des arrays einfach nur einen namen!
 
-const allCardsWithTagsHTMLOrJSThatAreBookmarked = null;
+console.log(onlyCardWithIdTwo);
+ 
+
+const allCardsWith3Tags = cards.filter(card => card.tags.lenght === 3 );     // Alle die 3 tags haben werden rausgefiltert
+
+console.log(allCardsWith3Tags);
+
+
+
+const allCardsThatAreNotBookmarked = cards.filter(card => card.isBookmarked !== true);         // so werden alle die Card, die bookmarked=false haben, gefiltert. 
+
+console.log(allCardsThatAreNotBookmarked);
+
+
+
+const allCardsWithTagsHTMLOrJSThatAreBookmarked = cards.filter(card => (card.tags.includes("html") || card.tags.includes("js")) && card.isBookmarked );  // Es muss entweder das erste oder das zweite stimmen (||), aber auf jeden fall muss es bookmarked sein (&&)
+
+console.log(allCardsWithTagsHTMLOrJSThatAreBookmarked );
+
+
 
 export {
   onlyCardWithIdTwo,
