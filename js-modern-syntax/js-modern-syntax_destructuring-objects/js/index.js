@@ -54,6 +54,14 @@ const dog = {
   age: 5,
 };
 
+const { name: dogName } = dog;      // das =dog steht weil so das objekt heisst und alles darin neu gespeichert wird, die veränderten keys 
+const { breed: dogBreed } = dog;  
+const { age: dogAge } = dog;  
+
+console.log(dogName)
+console.log(dogBreed)
+console.log(dogAge)
+
 /*
 EXERCISE 4
 Extract the `lastName` property from the `person` object as `personLastName`.
@@ -66,6 +74,11 @@ const person = {
   firstName: "Alex",
 };
 
+const { lastName: personLastName, ...moreInformation} = person;    // last name wird zu personLastName geändert, ...moreInformation erstellt mit dem Rest ein neues Objekt mit diesem Namen
+
+console.log(personLastName);                          // hier wird beides ausgeloggt als Test
+console.log(moreInformation);
+
 /*
 EXERCISE 5
 Refactor the following function to use destructuring assignment for the
@@ -73,15 +86,17 @@ three variables `name`, `country` and `numPeople`.
 Hint: You may need to rename one property during destructuring.
 */
 
-export function logInfo(city) {
-  const name = city.name;
-  const country = city.country;
-  const numPeople = city.population;
+export function logInfo(city) {          // PARAMETER der innerhalb der Funktion verwendet wird immer wieder
+  //const name = city.name;
+  //const country = city.country;
+  // const numPeople = city.population;           // !hier heisst es nicht population=city.population, sondern numPeople=city.population, daher solle es beim destructuren auch umbenannt und einheitlich sein 
+  
+  const { name, country, population: numPeople} = city;        // mit : umbenennen       // hier muss der Parameter eingegeben werdenn nicht logInfo!
+  return `${name} is in ${country} and has ${numPeople} inhabitants in it.`;     // hier wird dann unten das mit Marseille, France etc ausgegeben, des werden Werte in die Funktion eingetragen, die mann geschrieben hat.
 
-  return `${name} is in ${country} and has ${numPeople} inhabitants in it.`;
 }
-
+  // Hier unten die Werte die dann durch die Funktion laufen und das Ergebnis liefern.
 // Usage example:
 console.log(
-  logInfo({ name: "Marseille", country: "France", population: 861635 })
+  logInfo({ name: "Marseille", country: "France", population: 861635 })          // hier werden die werte eingegeben in die function, die aufgerufen wird
 );
