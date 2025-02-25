@@ -21,7 +21,7 @@ Use array destructuring to extract the variables `firstNameOfChris`, `lastNameOf
 
 const personChris = [12, "Chris", "Owen"];
 
-const [firstNameOfChris, lastNameOfChris, ageOfChris] = personChris;
+const [firstNameOfChris, lastNameOfChris, ageOfChris] = personChris;           // zum umbenennen einfach die neuen namen mit , getrennt in die Klammer schreiben 
 
 
 console.log(personChris);
@@ -35,6 +35,11 @@ Ensure no unused variables remain.
 
 const personAlex = ["Alex", 12, "Main"];
 
+const [firstNameOfAlex, , lastNameOfAlex] = personAlex;      // Mit Komma trennen wenn man werte nicht will, pro komma wird einer übersprungen.
+
+console.log(firstNameOfAlex);              // ! wenn man nicht das gesamte array haben will, muss man die werte einzeln danach ausloggen, nicht console.log (personalex)!
+console.log(lastNameOfAlex);
+
 /*
 EXERCISE 4
 Use array destructuring to extract the last name from the array
@@ -43,13 +48,22 @@ as variable called `lastName`.
 
 const students = ["Christina", "Jon", "Alexandare"];
 
+const [, , lastName] = students;
+
+console.log(lastName);
+
+
 /*
 EXERCISE 5
 Use array destructuring to extract all names from the nested array `nestedStudents`.
 Assign each name to a variable called "student1" through "student5", in the given order.
 */
 
-const nestedStudents = ["Chris", ["Ahmad", "Antigoni"], ["Toby", "Sam"]];
+const nestedStudents = ["Chris", ["Ahmad", "Antigoni"], ["Toby", "Sam"]];            
+
+const [student1, [student2, student3], [student4, student5]] = nestedStudents;    // drauf achten, dass die verschachtelung übereinstimmt wie oben
+
+console.log(nestedStudents);             // da das gesamte array geloggt werden kann, kann man nestedStudents im ganzen loggen
 
 /*
 EXERCISE 6
@@ -59,10 +73,12 @@ Keep in mind that you need to export the variable `result` to make the test work
 
 const values = [1, 6, 7, 9, 12, 5, 4];
 
-const result = add(1); // Spread values inside this function call
+const result = add(...values);       //funktion add wird aufgerufen       // Spread values inside this function call   // durch ...values wird der spread ausgelöst.   dasselbe wie: add (1,6,7,9,12,5,4)  nur viel kürzer und automatisch
 
-function add(...values) {
-  return values.reduce(
-    (previousValue, currentValue) => previousValue + currentValue
+function add(...values) {              
+  return values.reduce(                         // durch reduce kann man verschiedene sachen danach neu ausgeben lassen
+    (previousValue, currentValue) => previousValue + currentValue          // das wird nach dem reduce befehl in diesem beispiel bestimmt: es werden alle zahlen zusammengezählt 
   );
 }
+ // Ergebnis: 44 
+console.log(result);
